@@ -46,12 +46,12 @@ public final class PolyphonicAudioPlayer: AKMixer {
     }
     
     /// - returns: The next available player, if one exists. Otherwise, `nil`.
-    public var nextAvailablePlayer: AKAudioPlayer? {
+    fileprivate var nextAvailablePlayer: AKAudioPlayer? {
         return players.filter { $0.isAvailable }.first
     }
     
     /// `AKAudioPlayer` objects stored by the name of the file they are playing.
-    private var playerByName: [String: AKAudioPlayer] = [:]
+    fileprivate var playerByName: [String: AKAudioPlayer] = [:]
 
     /// `AKAudioPlayer` objects available to play
     fileprivate let players: [AKAudioPlayer]
