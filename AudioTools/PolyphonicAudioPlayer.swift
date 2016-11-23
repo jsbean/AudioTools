@@ -32,7 +32,7 @@ public typealias Directory = AKAudioFile.BaseDirectory
 /// } catch {
 ///     print(error)
 /// }
-///
+/// ```
 public final class PolyphonicAudioPlayer: AKMixer {
     
     /// Errors possible when attempting to start or stop audio files.
@@ -49,7 +49,7 @@ public final class PolyphonicAudioPlayer: AKMixer {
     public var nextAvailablePlayer: AKAudioPlayer? {
         return players.filter { $0.isAvailable }.first
     }
-        
+    
     /// `AKAudioPlayer` objects stored by the name of the file they are playing.
     private var playerByName: [String: AKAudioPlayer] = [:]
 
