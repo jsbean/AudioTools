@@ -1,0 +1,9 @@
+disabled_rules:
+  - comma
+  - variable_name
+
+excluded:
+  - Carthage
+
+trailing_whitespace:
+  ignores_empty_lines: true
